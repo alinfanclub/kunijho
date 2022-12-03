@@ -69,19 +69,17 @@ export default {
 }
 
 #mainArea {
-  height: 50vh;
   padding: 2rem 0;
   margin: 0 auto;
 }
 ul {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 10rem 10rem;
   text-align: center;
 }
 
 ul li {
   min-width: 100px;
-  margin-right: 1rem;
   height: 6rem;
   display: flex;
   align-items: center;
@@ -94,6 +92,10 @@ ul li p {
   position: relative;
   text-decoration: underline;
   text-underline-position: under;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
 }
 /* ul li p::after {
   bottom: 0;
