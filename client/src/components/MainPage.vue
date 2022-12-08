@@ -4,53 +4,53 @@
     <div id="mainArea">
       <ul>
         <li v-for="item in this.work" :key="item">
-          <router-link to="/">
+          <router-link :to="`/works/${item.adr}`">
             <p>{{ item.title }}</p>
           </router-link>
         </li>
       </ul>
     </div>
-    <footer-vue></footer-vue>
   </div>
 </template>
 
 <script>
-import FooterVue from "./common/FooterVue.vue";
 import HeaderVue from "./common/HeaderVue.vue";
 export default {
-  components: { HeaderVue, FooterVue },
+  components: { HeaderVue },
   data() {
     return {
       work: [
         {
-          title: "work01",
+          title: "PINK HAMMER 2022",
+          adr: "pinkhammer",
         },
         {
-          title: "work0dasdasd2",
+          title: "FUNNY MONEY 2022",
+          adr: "funnymoney",
         },
         {
-          title: "work0dasdasdasdasㅇㅇ3",
+          title: "",
         },
         {
-          title: "work04dasd",
+          title: "",
         },
         {
-          title: "fsdlfkjsdlfjsdlfjlsdfjlsdf",
+          title: "",
         },
         {
-          title: "sdjf;lsdjflskdjfs",
+          title: "",
         },
         {
-          title: "fasdfjsd;lfjsldkfjlksdjflasjflsakdf",
+          title: "",
         },
         {
-          title: "fasjdflsdjflksdf",
+          title: "",
         },
         {
-          title: "fsdjfsdlkfjsdlfjlsdjfsl",
+          title: "",
         },
         {
-          title: "fjsdflsf",
+          title: "",
         },
       ],
     };

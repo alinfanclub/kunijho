@@ -9,6 +9,10 @@ const routes = [
     path: "/main",
     component: () => import("../views/MainView.vue"),
   },
+  {
+    path: "/works/:id",
+    component: () => import("../components/WorksVue.vue"),
+  },
 ];
 
 const router = createRouter({
