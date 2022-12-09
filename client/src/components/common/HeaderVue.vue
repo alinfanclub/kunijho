@@ -1,12 +1,14 @@
 <template>
   <div id="headerArea">
-    <img
-      src="@/assets/sign.png"
-      alt=""
-      oncontextmenu="return false"
-      onselectstart="return false"
-      loading="lazy"
-    />
+    <router-link to="/">
+      <img
+        src="@/assets/sign.png"
+        alt=""
+        oncontextmenu="return false"
+        onselectstart="return false"
+        loading="lazy"
+      />
+    </router-link>
     <div></div>
   </div>
 </template>
@@ -27,6 +29,5 @@ export default {
 img {
   margin-top: 20px;
   width: 100px;
-  user-select: none;
 }
 </style>

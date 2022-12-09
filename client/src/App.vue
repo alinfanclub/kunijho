@@ -1,14 +1,14 @@
 <template>
   <div>
+    <header-vue></header-vue>
     <router-view></router-view>
-    <footer-vue></footer-vue>
   </div>
 </template>
 
 <script>
-import FooterVue from "./components/common/FooterVue.vue";
+import HeaderVue from "./components/common/HeaderVue.vue";
 export default {
-  components: { FooterVue },
+  components: { HeaderVue },
   name: "App",
 };
 </script>

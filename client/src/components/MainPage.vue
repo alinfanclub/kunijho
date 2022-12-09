@@ -1,6 +1,5 @@
 <template>
   <div id="containerArea">
-    <header-vue></header-vue>
     <div id="mainArea">
       <ul>
         <li v-for="item in this.work" :key="item">
@@ -10,13 +9,14 @@
         </li>
       </ul>
     </div>
+    <footer-vue></footer-vue>
   </div>
 </template>
 
 <script>
-import HeaderVue from "./common/HeaderVue.vue";
+import FooterVue from "./common/FooterVue.vue";
 export default {
-  components: { HeaderVue },
+  components: { FooterVue },
   data() {
     return {
       work: [
