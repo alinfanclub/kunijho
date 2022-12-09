@@ -29,28 +29,28 @@ export default {
           adr: "funnymoney",
         },
         {
-          title: "",
+          title: "0000",
         },
         {
-          title: "",
+          title: "0000",
         },
         {
-          title: "",
+          title: "0000",
         },
         {
-          title: "",
+          title: "0000",
         },
         {
-          title: "",
+          title: "0000",
         },
         {
-          title: "",
+          title: "0000",
         },
         {
-          title: "",
+          title: "0000",
         },
         {
-          title: "",
+          title: "0000",
         },
       ],
     };
@@ -90,12 +90,20 @@ ul li a {
 ul li p {
   width: 100%;
   position: relative;
-  text-decoration: underline;
-  text-underline-position: under;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   word-break: break-all;
+}
+ul li a:nth-of-type(3),
+ul li a:nth-of-type(4),
+ul li a:nth-of-type(5),
+ul li a:nth-of-type(6),
+ul li a:nth-of-type(7),
+ul li a:nth-of-type(8),
+ul li a:nth-of-type(9),
+ul li a:nth-of-type(10) {
+  pointer-events: none;
 }
 /* ul li p::after {
   bottom: 0;

@@ -5,6 +5,7 @@
       alt=""
       oncontextmenu="return false"
       onselectstart="return false"
+      loading="lazy"
     />
     <div></div>
   </div>
@@ -24,6 +25,8 @@ export default {
   align-items: center;
 }
 img {
+  margin-top: 20px;
+  width: 100px;
   user-select: none;
 }
 </style>
