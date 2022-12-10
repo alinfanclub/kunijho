@@ -63,6 +63,9 @@ export default {
 <style scoped>
 #containerArea {
   width: 100%;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 #containerArea > div#mainArea {
   display: flex;
@@ -71,7 +74,7 @@ export default {
 }
 
 #mainArea {
-  max-width: 90vw;
+  width: 100%;
   padding: 2rem 0;
   margin: 0 auto;
 }
@@ -84,6 +87,7 @@ ul {
 }
 
 ul li {
+  max-width: 550px;
   width: 43vw;
   height: 6rem;
   display: flex;
@@ -112,7 +116,7 @@ ul li p {
 }
 
 #footer {
-  max-width: 90vw;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

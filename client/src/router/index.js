@@ -17,6 +17,10 @@ const routes = [
     path: "/works/pinkhammer",
     component: () => import("../components/PinkHammerVue.vue"),
   },
+  {
+    path: "/works/funnymoney",
+    component: () => import("../components/FunnyMoneyVue.vue"),
+  },
 ];
 
 const router = createRouter({
