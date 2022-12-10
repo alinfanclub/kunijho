@@ -13,6 +13,10 @@ const routes = [
     path: "/works/:id",
     component: () => import("../components/WorksVue.vue"),
   },
+  {
+    path: "/works/pinkhammer",
+    component: () => import("../components/PinkHammerVue.vue"),
+  },
 ];
 
 const router = createRouter({

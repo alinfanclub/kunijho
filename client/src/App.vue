@@ -1,14 +1,11 @@
 <template>
   <div>
-    <header-vue></header-vue>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HeaderVue from "./components/common/HeaderVue.vue";
 export default {
-  components: { HeaderVue },
   name: "App",
 };
 </script>

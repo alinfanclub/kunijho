@@ -1,5 +1,6 @@
 <template>
   <div id="containerArea">
+    <header-vue-main></header-vue-main>
     <div id="mainArea">
       <ul>
         <li v-for="item in this.work" :key="item">
@@ -15,8 +16,9 @@
 
 <script>
 import FooterVue from "./common/FooterVue.vue";
+import HeaderVueMain from "./common/HeaderVueMain.vue";
 export default {
-  components: { FooterVue },
+  components: { FooterVue, HeaderVueMain },
   data() {
     return {
       work: [
@@ -29,28 +31,28 @@ export default {
           adr: "funnymoney",
         },
         {
-          title: "0000",
+          title: "----",
         },
         {
-          title: "0000",
+          title: "----",
         },
         {
-          title: "0000",
+          title: "----",
         },
         {
-          title: "0000",
+          title: "----",
         },
         {
-          title: "0000",
+          title: "----",
         },
         {
-          title: "0000",
+          title: "----",
         },
         {
-          title: "0000",
+          title: "----",
         },
         {
-          title: "0000",
+          title: "----",
         },
       ],
     };
@@ -62,27 +64,40 @@ export default {
 #containerArea {
   width: 100%;
 }
-#containerArea > div {
+#containerArea > div#mainArea {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #mainArea {
+  max-width: 90vw;
   padding: 2rem 0;
   margin: 0 auto;
 }
 ul {
-  display: grid;
-  grid-template-columns: 10rem 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
   text-align: center;
+  justify-content: space-around;
 }
 
 ul li {
-  min-width: 100px;
+  width: 43vw;
   height: 6rem;
   display: flex;
   align-items: center;
+}
+#mainArea ul li:nth-child(3),
+#mainArea ul li:nth-child(4),
+#mainArea ul li:nth-child(5),
+#mainArea ul li:nth-child(6),
+#mainArea ul li:nth-child(7),
+#mainArea ul li:nth-child(8),
+#mainArea ul li:nth-child(9),
+#mainArea ul li:nth-child(10) {
+  pointer-events: none;
 }
 ul li a {
   width: 100%;
@@ -95,23 +110,13 @@ ul li p {
   text-overflow: ellipsis;
   word-break: break-all;
 }
-ul li a:nth-of-type(3),
-ul li a:nth-of-type(4),
-ul li a:nth-of-type(5),
-ul li a:nth-of-type(6),
-ul li a:nth-of-type(7),
-ul li a:nth-of-type(8),
-ul li a:nth-of-type(9),
-ul li a:nth-of-type(10) {
-  pointer-events: none;
+
+#footer {
+  max-width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: flex-start;
 }
-/* ul li p::after {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: #333;
-} */
 </style>
