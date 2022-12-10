@@ -71,12 +71,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#mainArea {
   width: 100%;
   padding: 2rem 0;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 ul {
   display: flex;

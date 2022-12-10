@@ -1,6 +1,9 @@
 <template>
   <div>
     <header-vue-sub></header-vue-sub>
+    <div v-if="this.$store.state.loading == true" class="blackBg">
+      <spinner-vue></spinner-vue>
+    </div>
     <div id="mainArea">
       <h1>PINK HAMMER</h1>
       <ul>
@@ -12,7 +15,9 @@
               loading="lazy"
               oncontextmenu="return false"
               onselectstart="return false"
+              @load="load"
             />
+            <div id="skeleton" v-if="this.$store.state.loading"></div>
           </div>
           <div>
             <small>{{ item.caption }}</small>
@@ -25,8 +30,9 @@
 
 <script>
 import HeaderVueSub from "./common/HeaderVueSub.vue";
+import SpinnerVue from "./etc/SpinnerVue.vue";
 export default {
-  components: { HeaderVueSub },
+  components: { HeaderVueSub, SpinnerVue },
   data() {
     return {
       image: [
@@ -39,10 +45,14 @@ export default {
           caption: "pink hammer_printing on paper_210X210(cm)_2022",
         },
       ],
+      a: false,
     };
   },
-  methods: {},
-  mounted() {},
+  methods: {
+    load() {
+      this.$store.state.loading = false;
+    },
+  },
 };
 </script>
 
@@ -72,5 +82,38 @@ export default {
   width: 100%;
   margin: 0 auto;
   user-select: none;
+}
+@keyframes ske {
+  0% {
+    background-color: rgba(165, 165, 165, 0.1);
+  }
+
+  50% {
+    background-color: rgba(165, 165, 165, 0.3);
+  }
+
+  100% {
+    background-color: rgba(165, 165, 165, 0.1);
+  }
+}
+#skeleton {
+  max-width: 500px;
+  width: 80vw;
+  max-height: 500px;
+  height: 80vw;
+  margin: 0 auto;
+  user-select: none;
+  background: #ddd;
+  content: "";
+  border-radius: 15px;
+  animation: ske 1s infinite ease-in-out;
+}
+.blackBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.121);
 }
 </style>

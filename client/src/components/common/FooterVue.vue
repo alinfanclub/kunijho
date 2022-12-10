@@ -16,4 +16,15 @@
 export default {};
 </script>
 
-<style scoped></style>
+<style scoped>
+#footer h3 {
+  margin-bottom: 20px;
+}
+#footer ul li {
+  margin-bottom: 10px;
+}
+#footer > p {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+</style>
