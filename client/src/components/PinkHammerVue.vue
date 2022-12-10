@@ -8,6 +8,7 @@
           <div>
             <img
               :src="item.name"
+              class="image"
               loading="lazy"
               oncontextmenu="return false"
               onselectstart="return false"
@@ -40,6 +41,8 @@ export default {
       ],
     };
   },
+  methods: {},
+  mounted() {},
 };
 </script>
 

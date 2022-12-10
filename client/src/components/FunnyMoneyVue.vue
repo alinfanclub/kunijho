@@ -12,7 +12,7 @@
                 this.userClick = i;
               "
             >
-              {{ i + 1 }}
+              #{{ i + 1 }}
             </p>
           </div>
         </li>
