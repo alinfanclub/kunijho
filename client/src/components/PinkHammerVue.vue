@@ -4,7 +4,12 @@
     <div id="mainArea">
       <ul>
         <li v-for="item in this.image" :key="item">
-          <img :src="item.name" loading="lazy" />
+          <div>
+            <img :src="item.name" loading="lazy" />
+          </div>
+          <div>
+            <small>{{ item.caption }}</small>
+          </div>
         </li>
       </ul>
     </div>
@@ -20,9 +25,11 @@ export default {
       image: [
         {
           name: require("../assets/pinkhammer_01.jpg"),
+          caption: "pink hammer_printing on paper_210X210(cm)_2022",
         },
         {
           name: require("../assets/pinkhammer_02.jpg"),
+          caption: "pink hammer_printing on paper_210X210(cm)_2022",
         },
       ],
     };
@@ -30,8 +37,25 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+#mainArea {
+  padding-top: 2rem;
+  width: 90vw;
+  margin: 0 auto;
+}
+#mainArea ul li {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+#mainArea ul li > div {
+  text-align: center;
+  width: 50vw;
+  margin: 0.2rem auto;
+}
 #mainArea img {
   width: 100%;
+  margin: 0 auto;
 }
 </style>
