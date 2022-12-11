@@ -24,7 +24,7 @@
           </div>
         </li>
         <li>
-          <div>
+          <div id="video">
             <video controls muted>
               <source
                 src="../assets/movie/pinkhammer_per.mp4"
@@ -92,6 +92,9 @@ export default {
   text-align: center;
   width: 80vw;
   margin: 0.2rem auto;
+}
+#mainArea ul li > div#video {
+  max-width: 450px;
 }
 #mainArea img {
   max-width: 500px;
