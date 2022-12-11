@@ -27,6 +27,7 @@ export default {
   align-items: center;
 }
 img {
+  width: 100%;
   user-select: none;
   padding: 2rem 0;
 }

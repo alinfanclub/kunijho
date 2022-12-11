@@ -99,7 +99,7 @@ export default {
       if (this.copyToast == true) {
         setTimeout(() => {
           this.copyToast = false;
-        }, 1000);
+        }, 1500);
       }
     },
   },
@@ -164,7 +164,7 @@ export default {
   cursor: pointer;
 }
 .whiteBg p {
-  margin-right: 5vw;
+  margin-right: 20px;
 }
 .searchBtn {
   border: 1px solid #dfdfdf;
@@ -190,7 +190,7 @@ export default {
   align-items: center;
   justify-content: center;
   border-radius: 30px;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 #copyToast.hidden {
   bottom: -100%;

@@ -23,6 +23,19 @@
             <small>{{ item.caption }}</small>
           </div>
         </li>
+        <li>
+          <div>
+            <video controls muted>
+              <source
+                src="../assets/movie/pinkhammer_per.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div>
+            <small>pink hammer_live program_2’31”_2022</small>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -38,11 +51,11 @@ export default {
       image: [
         {
           name: require("../assets/pinkhammer_01.jpg"),
-          caption: "pink hammer_printing on paper_210X210(cm)_2022",
+          caption: "pink hammer_printing on paper_1460X1200(mm)_2022",
         },
         {
           name: require("../assets/pinkhammer_02.jpg"),
-          caption: "pink hammer_printing on paper_210X210(cm)_2022",
+          caption: "pink hammer_printing on paper_1000X200X300(mm)_2022",
         },
       ],
       a: false,
@@ -73,7 +86,7 @@ export default {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 2rem 0;
+  margin: 4rem 0;
 }
 #mainArea ul li > div {
   text-align: center;
@@ -85,6 +98,9 @@ export default {
   width: 100%;
   margin: 0 auto;
   user-select: none;
+}
+#mainArea video {
+  width: 100%;
 }
 @keyframes ske {
   0% {

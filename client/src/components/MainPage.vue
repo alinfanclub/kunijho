@@ -2,6 +2,7 @@
   <div id="containerArea">
     <header-vue-main></header-vue-main>
     <div id="mainArea">
+      <h2>ART WORKS</h2>
       <ul>
         <li v-for="item in this.work" :key="item">
           <router-link :to="`/works/${item.adr}`">
@@ -69,11 +70,15 @@ export default {
 }
 #containerArea > div#mainArea {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   padding: 2rem 0;
   margin: 0 auto;
+  margin-bottom: 2rem;
+}
+#containerArea > div#mainArea > h2 {
   margin-bottom: 2rem;
 }
 ul {
