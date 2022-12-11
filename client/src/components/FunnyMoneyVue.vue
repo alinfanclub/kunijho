@@ -180,7 +180,7 @@ export default {
 }
 #copyToast {
   position: fixed;
-  bottom: 5%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   width: 50vw;
