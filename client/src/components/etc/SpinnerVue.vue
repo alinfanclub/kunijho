@@ -14,15 +14,16 @@ export default {};
   position: absolute;
   width: 64px;
   height: 64px;
-  top: 47%;
-  left: 47%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .lds-facebook div {
   display: inline-block;
   position: absolute;
   left: 6px;
   width: 13px;
-  background: #42b883;
+  background: #de1886;
   animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 .lds-facebook div:nth-child(1) {

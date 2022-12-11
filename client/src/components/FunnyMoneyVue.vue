@@ -28,11 +28,17 @@
     <div id="modal" v-if="modal" class="blackBg">
       <div class="whiteBg">
         <p>{{ this.codeNum[this.userClick].key }}</p>
-        <ion-icon name="copy-outline" @click="copyToClipBoard"></ion-icon>
+        <ion-icon
+          name="copy-outline"
+          @click="copyToClipBoard(), ToastCallback()"
+        ></ion-icon>
         <div @click="this.modal = false" class="closeBtn">
           <ion-icon name="close-circle"></ion-icon>
         </div>
       </div>
+    </div>
+    <div id="copyToast" :class="{ hidden: this.copyToast == false }">
+      <p>copy complete</p>
     </div>
   </div>
 </template>
@@ -45,6 +51,7 @@ export default {
     return {
       modal: false,
       userClick: "",
+      copyToast: false,
       codeNum: [
         {
           key: "FA3987334C",
@@ -87,6 +94,14 @@ export default {
       document.execCommand("copy"); //복사
       sel.removeRange(range); //선택 정보 삭제
     },
+    ToastCallback() {
+      this.copyToast = true;
+      if (this.copyToast == true) {
+        setTimeout(() => {
+          this.copyToast = false;
+        }, 1000);
+      }
+    },
   },
 };
 </script>
@@ -112,6 +127,7 @@ export default {
 #mainArea ul li {
   width: calc(33% - 15px);
   height: 20vw;
+  cursor: pointer;
 }
 .blackBg {
   position: fixed;
@@ -142,6 +158,10 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   font-size: 7vw;
+  background-color: #fff;
+  height: 7vw;
+  border-radius: 50%;
+  cursor: pointer;
 }
 .whiteBg p {
   margin-right: 5vw;
@@ -149,8 +169,44 @@ export default {
 .searchBtn {
   border: 1px solid #dfdfdf;
   border-radius: 15px;
-  padding: 3vw 2vw;
-  width: fit-content;
+  max-width: 100px;
+  max-height: 33px;
+  width: 30vw;
+  height: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
+}
+#copyToast {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  height: 10vw;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+#copyToast.hidden {
+  bottom: -100%;
+}
+#copyToast p {
+  color: #fff;
+}
+
+@media (min-width: 820px) {
+  .closeBtn {
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    height: 40px;
+  }
 }
 </style>

@@ -66,6 +66,9 @@ export default {
 #mainArea h1 {
   padding-top: 2rem;
 }
+#mainArea ul {
+  margin-top: 10vw;
+}
 #mainArea ul li {
   display: flex;
   justify-content: center;
@@ -96,6 +99,7 @@ export default {
     background-color: rgba(165, 165, 165, 0.1);
   }
 }
+
 #skeleton {
   max-width: 500px;
   width: 80vw;
