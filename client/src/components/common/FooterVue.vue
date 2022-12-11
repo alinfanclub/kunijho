@@ -8,7 +8,7 @@
       <li>+82 (0)10 8933 4679</li>
       <li>In Korea(South)</li>
     </ul>
-    <p>copyright(c) 2022 All rights reserved</p>
+    <p>copyright kunijho 2022 All rights reserved</p>
   </div>
 </template>
 
