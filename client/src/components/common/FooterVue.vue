@@ -4,7 +4,14 @@
     <ul>
       <li>Jinuk Oh</li>
       <li>kunijho@naver.com</li>
-      <li>Instagram @kunijho</li>
+      <li>
+        Instagram
+        <a
+          href="https://instagram.com/kunijho?igshid=MDM4ZDc5MmU="
+          target="blank"
+          >@kunijho</a
+        >
+      </li>
       <li>+82 (0)10 8933 4679</li>
       <li>In Korea(South)</li>
     </ul>
@@ -22,6 +29,9 @@ export default {};
 }
 #footer ul li {
   margin-bottom: 10px;
+}
+#footer ul li a {
+  font-weight: bold;
 }
 #footer > p {
   padding-top: 10px;
